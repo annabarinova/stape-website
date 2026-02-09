@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Stape design system */
+  --background: #FFFFFF;
+  --foreground: #1A2F2B;
+  --primary: #1A2F2B;
+  --primary-foreground: #FFFFFF;
+  --accent: #D4F651;
+  --accent-hover: #C5E744;
+  --accent-foreground: #1A2F2B;
+  --background-secondary: #F5F3EE;
+  --background-tertiary: #FAFAF8;
+  --background-dark: #1A2F2B;
+  --background-dark-secondary: #243D38;
+  --border: #E5E5E5;
+  --foreground-muted: #7A8A87;
+  --foreground-secondary: #4A5E5A;
+  --success: #00B887;
+  --error: #EF4444;
+  --warning: #F59E0B;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Stape: no generic gradient blobs — use minimal abstract shapes or solid backgrounds */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+}
