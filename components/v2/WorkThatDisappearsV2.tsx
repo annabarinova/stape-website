@@ -41,12 +41,21 @@ export default function WorkThatDisappearsV2() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [thingsCount, setThingsCount] = useState(143);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhrase((prev) => (prev + 1) % stapePhrases.length);
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+
+  // Slowly ticking counter — things you could be doing instead
+  useEffect(() => {
+    const ticker = setInterval(() => {
+      setThingsCount((prev) => prev + 1);
+    }, 8000);
+    return () => clearInterval(ticker);
   }, []);
 
   return (
@@ -116,19 +125,30 @@ export default function WorkThatDisappearsV2() {
               </AnimatePresence>
             </div>
 
-            {/* Progress dots */}
-            <div className="flex items-center gap-2 mt-8">
-              {stapePhrases.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentPhrase(i)}
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    i === currentPhrase
-                      ? 'w-6 bg-accent'
-                      : 'w-2 bg-white/20 hover:bg-white/30'
-                  }`}
-                />
-              ))}
+            {/* Progress dots + counter */}
+            <div>
+              <div className="flex items-center gap-2">
+                {stapePhrases.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentPhrase(i)}
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      i === currentPhrase
+                        ? 'w-6 bg-accent'
+                        : 'w-2 bg-white/20 hover:bg-white/30'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* "And N other things" counter */}
+              <p className="mt-5 text-white/40 text-xs leading-relaxed">
+                …and{' '}
+                <span className="font-mono text-accent/70 text-sm font-semibold tabular-nums">
+                  {thingsCount}
+                </span>{' '}
+                other things that actually move the needle
+              </p>
             </div>
           </motion.div>
         </div>
