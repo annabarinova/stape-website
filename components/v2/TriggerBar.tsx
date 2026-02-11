@@ -125,7 +125,7 @@ export default function TriggerBar() {
             Any of this sound painfully familiar?
           </h2>
           <p className="text-foreground-muted text-sm max-w-md">
-            Be honest. We won&apos;t judge. (We&apos;ve heard worse.)
+            Say it as it is. We&apos;re curious, not judgemental.
           </p>
         </motion.div>
 
