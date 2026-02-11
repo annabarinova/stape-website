@@ -75,11 +75,8 @@ export default function ComparisonTableV2() {
                   <th className="text-left py-4 px-3 text-sm font-semibold text-primary w-1/4"></th>
                   <th className="text-center py-4 px-3 text-sm font-semibold text-foreground-muted">Keep DIY-ing It</th>
                   <th className="text-center py-4 px-3 text-sm font-semibold text-foreground-muted">Better Payroll Tool</th>
-                  <th className="text-center py-4 px-3 text-sm font-semibold text-primary">
-                    <span className="inline-flex items-center gap-1.5">
-                      Stape
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
-                    </span>
+                  <th className="text-center py-4 px-4 text-sm font-bold text-primary bg-accent/20 rounded-t-xl">
+                    Stape
                   </th>
                 </tr>
               </thead>
@@ -89,7 +86,7 @@ export default function ComparisonTableV2() {
                     <td className="py-4 px-3 text-sm font-medium text-primary">{row.feature}</td>
                     <td className="py-4 px-3 text-sm text-foreground-muted text-center">{row.diy}</td>
                     <td className="py-4 px-3 text-sm text-foreground-muted text-center">{row.tool}</td>
-                    <td className="py-4 px-3 text-sm text-primary text-center font-medium">{row.stape}</td>
+                    <td className={`py-4 px-4 text-sm text-primary text-center font-semibold bg-accent/20 ${index === comparisonData.length - 1 ? 'rounded-b-xl' : ''}`}>{row.stape}</td>
                   </tr>
                 ))}
               </tbody>

@@ -111,12 +111,14 @@ export default function PayrollGeekLevel() {
                   : 'border-transparent bg-white hover:border-primary/20 hover:shadow-md'
               }`}
             >
-              {/* Icon avatar */}
-              <div className={`w-12 h-12 rounded-xl ${char.accent} flex items-center justify-center text-primary mb-4`}>
-                {char.icon}
+              {/* Icon avatar — fixed height block */}
+              <div className="h-16 flex items-start">
+                <div className={`w-12 h-12 rounded-xl ${char.accent} flex items-center justify-center text-primary`}>
+                  {char.icon}
+                </div>
               </div>
 
-              {/* Role */}
+              {/* Role — aligned across all cards */}
               <p className="text-sm font-display font-bold text-primary mb-1">{char.role}</p>
 
               {/* Level label */}

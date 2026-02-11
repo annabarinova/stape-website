@@ -99,27 +99,39 @@ export default function TriggerBar() {
 
   const totalUserYes = Object.values(userReactions).filter((set) => set.has('yes')).length;
 
+  // Miro-style random rotations and shadow variations for each sticky note
+  const stickyStyles = [
+    { rotate: -1.5, shadow: '2px 3px 8px rgba(0,0,0,0.08)' },
+    { rotate: 0.8, shadow: '3px 2px 6px rgba(0,0,0,0.06)' },
+    { rotate: -0.5, shadow: '1px 4px 10px rgba(0,0,0,0.07)' },
+    { rotate: 1.2, shadow: '4px 2px 8px rgba(0,0,0,0.09)' },
+    { rotate: 0.3, shadow: '2px 4px 6px rgba(0,0,0,0.06)' },
+    { rotate: -1.0, shadow: '3px 3px 10px rgba(0,0,0,0.08)' },
+    { rotate: 1.5, shadow: '1px 3px 8px rgba(0,0,0,0.07)' },
+    { rotate: -0.7, shadow: '4px 1px 6px rgba(0,0,0,0.06)' },
+  ];
+
   return (
-    <section ref={ref} className="py-16 md:py-20 bg-background-secondary">
+    <section ref={ref} className="py-24 md:py-32 bg-background-secondary">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         {/* Header */}
         <motion.div
-          className="mb-10"
+          className="mb-14"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-[28px] md:text-[36px] font-display font-extrabold text-primary tracking-[-0.02em] leading-[1.1] mb-3">
-            Recognize <span className="italic">your</span> situation?
+          <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-primary tracking-[-0.02em] leading-[1.1] mb-3">
+            Any of this sound painfully familiar?
           </h2>
-          <p className="text-foreground-muted text-sm max-w-xl">
-            These are the moments that bring teams to us. Vote on the ones that hit home.
+          <p className="text-foreground-muted text-sm max-w-md">
+            Be honest. We won&apos;t judge. (We&apos;ve heard worse.)
           </p>
         </motion.div>
 
         {/* Sticky note grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -127,17 +139,20 @@ export default function TriggerBar() {
           {situations.map((situation, i) => {
             const userSet = userReactions[situation.id] || new Set<ReactionType>();
             const hasAnyReaction = userSet.size > 0;
+            const style = stickyStyles[i % stickyStyles.length];
 
             return (
               <motion.div
                 key={situation.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20, rotate: 0 }}
+                animate={isInView ? { opacity: 1, y: 0, rotate: style.rotate } : { opacity: 0, y: 20, rotate: 0 }}
+                whileHover={{ rotate: 0, scale: 1.03, y: -4 }}
                 transition={{ duration: 0.4, delay: 0.1 + i * 0.05 }}
-                className={`relative flex flex-col justify-between rounded-lg p-5 min-h-[200px] transition-all duration-300 shadow-sm ${
+                style={{ boxShadow: style.shadow }}
+                className={`relative flex flex-col justify-between rounded-sm p-5 min-h-[210px] transition-colors duration-300 cursor-default ${
                   hasAnyReaction
-                    ? 'bg-[#FFF3A0] border border-[#E8D56C] shadow-md -translate-y-0.5'
-                    : 'bg-[#FFF9DB] border border-[#F0E3A0] hover:shadow-md hover:-translate-y-0.5'
+                    ? 'bg-[#FFF3A0]'
+                    : 'bg-[#FFF9DB]'
                 }`}
               >
                 {/* Situation text */}

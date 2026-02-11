@@ -17,7 +17,7 @@ export default function PricingComparison() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          What it costs vs what it costs
+          What it costs vs what it <span className="relative"><span className="relative z-10">costs</span><span className="absolute bottom-1 left-0 right-0 h-3 bg-accent/40 -z-0 rounded-sm" /></span>
         </motion.h2>
 
         <motion.div
