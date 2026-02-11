@@ -16,18 +16,17 @@ export default function ProductShowcaseV2() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="bg-background-secondary rounded-2xl overflow-hidden p-6 md:p-10"
         >
           <h2 className="text-[28px] md:text-[36px] font-display font-extrabold text-primary text-center mb-8 tracking-[-0.02em] leading-[1.1]">
             See how your team gets paid — while you do nothing
           </h2>
-          <div className="relative w-full rounded-xl overflow-hidden shadow-lg">
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-background-secondary p-3 md:p-4">
             <Image
               src="/Images/SCR-20260209-bjhb.png"
               alt="Stape dashboard — contractor payment management"
               width={1600}
               height={900}
-              className="w-full h-auto"
+              className="w-full h-auto rounded-xl"
               priority
             />
           </div>

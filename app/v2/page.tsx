@@ -21,8 +21,8 @@ export default function HomeV2() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <HeroV2 />
-      <TriggerBar />
       <MetricsV2 />
+      <TriggerBar />
       <ProductShowcaseV2 />
       <WorkThatDisappearsV2 />
       <TimelineV2 />

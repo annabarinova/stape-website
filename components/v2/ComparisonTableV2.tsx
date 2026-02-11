@@ -43,7 +43,7 @@ export default function ComparisonTableV2() {
 
   return (
     <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-[1100px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1000px] mx-auto px-6 md:px-12">
         <motion.h2
           className="text-[32px] md:text-[40px] font-display font-extrabold text-primary text-center mb-4 tracking-[-0.02em]"
           initial={{ opacity: 0, y: 20 }}
@@ -63,57 +63,37 @@ export default function ComparisonTableV2() {
 
         <motion.div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+          className="overflow-x-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          {/* Column 1: DIY */}
-          <div className="bg-background-secondary rounded-2xl p-6 md:p-8 border border-border/50">
-            <div className="mb-6 pb-4 border-b border-border">
-              <p className="text-xs font-semibold text-foreground-muted uppercase tracking-wider mb-1">Option A</p>
-              <h3 className="text-lg font-display font-bold text-primary">Keep DIY-ing it</h3>
-            </div>
-            <ul className="space-y-4">
-              {comparisonData.map((row, i) => (
-                <li key={i}>
-                  <p className="text-[11px] font-semibold text-foreground-muted uppercase tracking-wider mb-0.5">{row.feature}</p>
-                  <p className="text-sm text-foreground-secondary">{row.diy}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 2: Better Tool */}
-          <div className="bg-background-secondary rounded-2xl p-6 md:p-8 border border-border/50">
-            <div className="mb-6 pb-4 border-b border-border">
-              <p className="text-xs font-semibold text-foreground-muted uppercase tracking-wider mb-1">Option B</p>
-              <h3 className="text-lg font-display font-bold text-primary">A better payroll tool</h3>
-            </div>
-            <ul className="space-y-4">
-              {comparisonData.map((row, i) => (
-                <li key={i}>
-                  <p className="text-[11px] font-semibold text-foreground-muted uppercase tracking-wider mb-0.5">{row.feature}</p>
-                  <p className="text-sm text-foreground-secondary">{row.tool}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Stape — highlighted */}
-          <div className="bg-primary rounded-2xl p-6 md:p-8 ring-2 ring-accent">
-            <div className="mb-6 pb-4 border-b border-white/15">
-              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Option C</p>
-              <h3 className="text-lg font-display font-bold text-white">Stape</h3>
-            </div>
-            <ul className="space-y-4">
-              {comparisonData.map((row, i) => (
-                <li key={i}>
-                  <p className="text-[11px] font-semibold text-white/50 uppercase tracking-wider mb-0.5">{row.feature}</p>
-                  <p className="text-sm text-white font-medium">{row.stape}</p>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-background-secondary rounded-2xl p-6 md:p-8 min-w-[700px]">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-4 px-3 text-sm font-semibold text-primary w-1/4"></th>
+                  <th className="text-center py-4 px-3 text-sm font-semibold text-foreground-muted">Keep DIY-ing It</th>
+                  <th className="text-center py-4 px-3 text-sm font-semibold text-foreground-muted">Better Payroll Tool</th>
+                  <th className="text-center py-4 px-3 text-sm font-semibold text-primary">
+                    <span className="inline-flex items-center gap-1.5">
+                      Stape
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((row, index) => (
+                  <tr key={index} className="border-b border-border/50 last:border-0">
+                    <td className="py-4 px-3 text-sm font-medium text-primary">{row.feature}</td>
+                    <td className="py-4 px-3 text-sm text-foreground-muted text-center">{row.diy}</td>
+                    <td className="py-4 px-3 text-sm text-foreground-muted text-center">{row.tool}</td>
+                    <td className="py-4 px-3 text-sm text-primary text-center font-medium">{row.stape}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </motion.div>
 

@@ -42,7 +42,7 @@ export default function HeroV2() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          You didn&apos;t start your company to do payroll. We&apos;re here to make it obsolete
+          Payroll was never the job you signed up for. We make it disappear
         </motion.h1>
 
         {/* Subhead */}
