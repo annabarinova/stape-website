@@ -130,7 +130,7 @@ export default function ProductPage() {
                     />
                   ) : (
                     <Image
-                      src={step.image}
+                      src={`${basePath}${step.image}`}
                       alt={step.imageAlt}
                       width={2400}
                       height={1400}
