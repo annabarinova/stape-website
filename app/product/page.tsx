@@ -7,6 +7,8 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const steps = [
   {
     title: 'Drop a doc. Get a company profile.',
@@ -119,7 +121,7 @@ export default function ProductPage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-border/50">
                   {step.video ? (
                     <video
-                      src={step.video}
+                      src={`${basePath}${step.video}`}
                       autoPlay
                       loop
                       muted
@@ -157,7 +159,7 @@ export default function ProductPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-border/50">
               <video
-                src="/product-autopilot.mp4"
+                src={`${basePath}/product-autopilot.mp4`}
                 autoPlay
                 loop
                 muted
@@ -183,7 +185,7 @@ export default function ProductPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-border/50">
               <video
-                src="/product-compliance.mp4"
+                src={`${basePath}/product-compliance.mp4`}
                 autoPlay
                 loop
                 muted
