@@ -82,7 +82,7 @@ export default function WorkThatDisappearsV2() {
           >
             {/* Header inside card padding */}
             <div className="px-8 md:px-10 pt-8 md:pt-10">
-              <h3 className="text-lg font-display font-bold text-white mb-6">Your Tuesday Without Stape</h3>
+              <h3 className="text-lg font-display font-bold text-white mb-6">Your Tuesday without Stape</h3>
             </div>
 
             {/* List overflows bottom of the card — no bottom padding, card clips it */}
@@ -107,7 +107,7 @@ export default function WorkThatDisappearsV2() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-accent/10 rounded-2xl p-8 md:p-10 border border-accent/20 flex flex-col justify-between h-[480px]"
           >
-            <h3 className="text-lg font-display font-bold text-white mb-8">Your Tuesday With Stape</h3>
+            <h3 className="text-lg font-display font-bold text-white mb-8">Your Tuesday with Stape</h3>
 
             {/* Single rotating phrase — large type */}
             <div className="flex-1 flex items-center">
