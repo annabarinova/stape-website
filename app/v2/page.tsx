@@ -8,10 +8,10 @@ import WorkThatDisappearsV2 from '@/components/v2/WorkThatDisappearsV2';
 import TimelineV2 from '@/components/v2/TimelineV2';
 import ComplianceFirewall from '@/components/v2/ComplianceFirewall';
 import SocialProofV2 from '@/components/v2/SocialProofV2';
-import ComparisonTable from '@/components/ComparisonTable';
-import RoleSpecificOutcomesV2 from '@/components/v2/RoleSpecificOutcomesV2';
-import FAQV2 from '@/components/v2/FAQV2';
+import ComparisonTableV2 from '@/components/v2/ComparisonTableV2';
+import PayrollGeekLevel from '@/components/v2/PayrollGeekLevel';
 import PricingComparison from '@/components/PricingComparison';
+import FAQV2 from '@/components/v2/FAQV2';
 import CTAV2 from '@/components/v2/CTAV2';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -28,10 +28,10 @@ export default function HomeV2() {
       <TimelineV2 />
       <ComplianceFirewall />
       <SocialProofV2 />
-      <ComparisonTable />
-      <RoleSpecificOutcomesV2 />
-      <FAQV2 />
+      <ComparisonTableV2 />
+      <PayrollGeekLevel />
       <PricingComparison />
+      <FAQV2 />
       <CTAV2 />
       <Footer />
     </main>

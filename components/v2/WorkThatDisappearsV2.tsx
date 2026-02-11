@@ -86,6 +86,24 @@ export default function WorkThatDisappearsV2() {
             </div>
           </motion.div>
         </div>
+
+        {/* CTA */}
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 15 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+        >
+          <a
+            href="#"
+            className="inline-flex items-center gap-1.5 px-6 py-3 bg-accent text-primary font-semibold text-sm rounded-md hover:bg-accent/90 transition-colors"
+          >
+            Get your Tuesdays back
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
