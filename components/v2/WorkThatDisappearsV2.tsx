@@ -34,14 +34,14 @@ const stapePhrases = [
   'Interview the senior engineer in S\u00e3o Paulo',
   'Close the deal. Ship the feature. Take the call from Tokyo.',
   'Take a proper lunch break',
-  'Leave at 6pm knowing everyone\u2019s paid',
+  'Close the deal you\u2019ve been chasing for weeks',
 ];
 
 export default function WorkThatDisappearsV2() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [currentPhrase, setCurrentPhrase] = useState(0);
-  const [thingsCount, setThingsCount] = useState(143);
+  const [thingsCount, setThingsCount] = useState(167);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -68,7 +68,7 @@ export default function WorkThatDisappearsV2() {
           className="mb-16 text-center"
         >
           <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-white leading-[1.1] tracking-[-0.02em]">
-            Same Tuesday. Two different companies.
+            Two ways to spend your Tuesday
           </h2>
         </motion.div>
 
@@ -147,7 +147,7 @@ export default function WorkThatDisappearsV2() {
                 <span className="font-mono text-accent/70 text-sm font-semibold tabular-nums">
                   {thingsCount}
                 </span>{' '}
-                things that actually grow your company
+                other things that actually move the needle
               </p>
             </div>
           </motion.div>
@@ -164,7 +164,7 @@ export default function WorkThatDisappearsV2() {
             href="#"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-accent text-primary font-semibold text-sm rounded-md hover:bg-accent/90 transition-colors"
           >
-            Get your week back
+            Get your Tuesdays back
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

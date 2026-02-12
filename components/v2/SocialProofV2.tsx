@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    quote: "We used to spend 2 days a month on payroll. Now I click a button and forget about it. I genuinely don\u2019t know what happens behind the scenes \u2014 and that\u2019s the point.",
+    quote: "We went from spending 2 days every month on contractor payroll to literally clicking a button. It\u2019s absurd how much time we got back.",
     author: "Sarah Chen",
     role: "CFO, Vertex AI",
     metric: "14 hours saved/month",

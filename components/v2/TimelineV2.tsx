@@ -8,7 +8,7 @@ const timelineSteps = [
   {
     time: 'Today, 2pm',
     title: 'Upload your contractor list',
-    aside: '(You bring the talent. We handle everything else.)',
+    aside: '(You upload the people. We handle the complexity.)',
   },
   {
     time: 'Today, 2:15pm',
@@ -18,7 +18,7 @@ const timelineSteps = [
   {
     time: 'Tomorrow, 10am',
     title: 'Money lands in 242 countries, local currency',
-    aside: '(No SWIFT delays. No bank questions. Just money, arriving.)',
+    aside: '(No SWIFT limbo. No bank interrogations.)',
   },
   {
     time: 'Tomorrow, 11am',
@@ -41,7 +41,7 @@ export default function TimelineV2() {
           className="mb-12 text-center"
         >
           <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-white leading-[1.1] tracking-[-0.02em]">
-            From &ldquo;we need to pay someone&rdquo; to &ldquo;done.&rdquo; 48 hours.
+            From payroll overwhelm to &ldquo;wait, that was it?&rdquo; in 48 hours
           </h2>
         </motion.div>
 
@@ -91,7 +91,7 @@ export default function TimelineV2() {
             className="flex justify-end mt-4"
           >
             <div className="bg-accent text-primary text-sm font-semibold rounded-lg px-5 py-2.5">
-              You: back to the work you actually care about.
+              You: Back to building your product.
             </div>
           </motion.div>
         </motion.div>

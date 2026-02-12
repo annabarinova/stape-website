@@ -50,7 +50,7 @@ export default function ComparisonTableV2() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          Three options. Two still make you do the work.
+          Three options. Two waste your time.
         </motion.h2>
         <motion.p
           className="text-foreground-muted text-center mb-12 text-sm"
@@ -58,6 +58,7 @@ export default function ComparisonTableV2() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
+          Choose wisely.
         </motion.p>
 
         <motion.div
@@ -100,7 +101,7 @@ export default function ComparisonTableV2() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="text-sm text-foreground-muted italic mb-6">
-            We&apos;re not a better payroll tool. We&apos;re the reason you stop needing one.
+            We&apos;re not a better mousetrap. We&apos;re making mice irrelevant.
           </p>
           <a
             href="#"

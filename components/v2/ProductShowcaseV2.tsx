@@ -18,7 +18,7 @@ export default function ProductShowcaseV2() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-[28px] md:text-[36px] font-display font-extrabold text-primary text-center mb-16 tracking-[-0.02em] leading-[1.1]">
-            Watch payroll happen without you
+            See how your team gets paid — while you do nothing
           </h2>
           <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-background-secondary p-3 md:p-4">
             <video

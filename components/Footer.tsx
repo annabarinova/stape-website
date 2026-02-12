@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h3 className="text-xl font-display font-bold mb-2">Stape</h3>
             <p className="text-sm text-primary-foreground/70 mb-6 leading-relaxed">
-              Global contractor payroll that handles itself. Try it with one person. You&apos;ll see.
+              Global contractor payroll. Stop doing payroll. Pay one person first. See what vanishes.
             </p>
 
             {/* Book a Demo card */}

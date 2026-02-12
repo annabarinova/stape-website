@@ -9,8 +9,8 @@ const characters = [
   {
     id: 'founder',
     role: 'Founder / CEO',
-    level: 'Is everyone paid?',
-    tagline: 'Yes. Always yes.',
+    level: 'I don\u2019t want to know',
+    tagline: 'Just tell me everyone got paid',
     description:
       'Your contractors get legalized income for residence permits and Digital Nomad visas \u2014 automatically. Your investors see a clean audit trail. Your team grows from 15 to 70, and the payment process stays invisible. You never open a spreadsheet again.',
     icon: (
@@ -51,8 +51,8 @@ const characters = [
   {
     id: 'hr',
     role: 'HR Manager',
-    level: 'Wait, I don\u2019t have to chase documents anymore?',
-    tagline: 'Contracts, compliance, filings. Done.',
+    level: 'Auto-pilot mode',
+    tagline: 'Contracts, docs, compliance — all handled',
     description:
       'You stop managing a zoo of 4 providers across 12 countries. Every contractor gets paid on the promised day, in the promised amount. Compliance documents generate automatically. You go from \u2018payroll specialist who also does HR\u2019 back to \u2018HR leader.\u2019',
     icon: (
@@ -82,7 +82,7 @@ export default function PayrollGeekLevel() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-primary tracking-[-0.02em] leading-[1.1]">
-            How involved do you want to be?
+            How deep do you want to go?
           </h2>
         </motion.div>
         <motion.p
@@ -91,7 +91,7 @@ export default function PayrollGeekLevel() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          (Honestly, you don&apos;t have to be.)
+          Choose your payroll involvement level
         </motion.p>
 
         {/* Character Select Grid */}

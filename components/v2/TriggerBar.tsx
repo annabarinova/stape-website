@@ -122,10 +122,10 @@ export default function TriggerBar() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-primary tracking-[-0.02em] leading-[1.1] mb-3">
-            You&apos;re not running payroll. You&apos;re firefighting.
+            Any of this sound painfully familiar?
           </h2>
           <p className="text-foreground-muted text-sm max-w-md">
-            Every one of these is someone&apos;s actual Tuesday.
+            Say it as it is. We&apos;re curious, not judgemental.
           </p>
         </motion.div>
 

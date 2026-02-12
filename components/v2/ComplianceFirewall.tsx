@@ -43,7 +43,7 @@ export default function ComplianceFirewall() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          Compliance that handles itself. Your auditor has nothing to ask.
+          The legal architecture your auditor will love
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -78,7 +78,7 @@ export default function ComplianceFirewall() {
           >
             <div>
               <h3 className="text-lg font-display font-bold text-white mb-6">
-                What you&apos;ll never do again
+                What disappears
               </h3>
               <ul className="space-y-4">
                 {whatDisappears.map((item, i) => (
