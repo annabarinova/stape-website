@@ -6,19 +6,19 @@ import { useRef } from 'react';
 
 const metrics = [
   {
-    label: 'Teams that stopped doing payroll',
+    label: 'Teams that forgot payroll exists',
     value: '100+',
   },
   {
-    label: 'Paid across complex corridors worldwide',
+    label: 'Moved through corridors others won\u2019t touch',
     value: '$40M+',
   },
   {
-    label: 'Countries with guaranteed delivery',
+    label: 'Countries where money always arrives',
     value: '242',
   },
   {
-    label: 'From signup to first payment',
+    label: 'From \u201chi\u201d to first payout',
     value: '48hrs',
   },
 ];

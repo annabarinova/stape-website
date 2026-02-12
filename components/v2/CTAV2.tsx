@@ -13,7 +13,7 @@ export default function CTAV2() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          You don&apos;t have to switch everything today
+          Start with one person. See what changes.
         </motion.h2>
         <motion.p
           className="text-base text-foreground-secondary leading-relaxed mb-10"
@@ -22,7 +22,7 @@ export default function CTAV2() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Pay one contractor through Stape this week. See how it feels when the money lands in 48 hours and the audit trail generates itself. If it works, pay two next month. We&apos;re not trying to own your soul — we&apos;re trying to save your Saturdays.
+          You don&apos;t have to migrate your whole team. Pay one person through Stape. Watch the money land, the documents generate, the audit trail build itself. If it works — and it will — pay two more next month.
         </motion.p>
         <motion.div
           className="flex flex-col sm:flex-row gap-3 justify-center items-center"
@@ -35,7 +35,7 @@ export default function CTAV2() {
             href="#"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-primary text-primary-foreground font-semibold text-sm rounded-md hover:bg-primary/90 transition-colors"
           >
-            Make a Test Payment
+            Pay someone now
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -44,7 +44,7 @@ export default function CTAV2() {
             href="#"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-3 border border-border text-primary font-semibold text-sm rounded-md hover:bg-background-secondary transition-colors"
           >
-            Talk to a Human First
+            Talk to a human first
           </a>
         </motion.div>
         <motion.p
@@ -54,7 +54,7 @@ export default function CTAV2() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Average time from first call to first payment: 48 hours. 47 teams switched this month.
+          48 hours from first call to first payment. 47 teams switched this month. Zero switched back.
         </motion.p>
       </div>
     </section>

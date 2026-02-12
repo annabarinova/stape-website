@@ -22,8 +22,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stape — Payroll that shouldn't exist",
-  description: "Global contractor payroll. Stop doing payroll. Pay one person first. See what vanishes.",
+  title: "Stape — Payroll that runs itself",
+  description: "Global contractor payroll that handles itself. Try it with one person. You'll see.",
 };
 
 export default function RootLayout({
